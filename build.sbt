@@ -32,6 +32,7 @@ lazy val alpakka = project
     mongodb,
     mqtt,
     mqttStreaming,
+    nats,
     orientdb,
     reference,
     s3,
@@ -64,7 +65,7 @@ lazy val alpakka = project
         |  mqtt/testOnly *.MqttSourceSpec - runs a single test
         |
         |  mimaReportBinaryIssues - checks whether this current API
-        |    is binary compatible with the released version
+     https://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html   |    is binary compatible with the released version
       """.stripMargin,
     // unidoc combines sources and jars from all connectors and that
     // might include some incompatible ones. Depending on the
@@ -261,6 +262,9 @@ lazy val mqttStreaming = alpakkaProject("mqtt-streaming",
 lazy val mqttStreamingBench = internalProject("mqtt-streaming-bench", crossScalaVersions -= Dependencies.Scala211)
   .enablePlugins(JmhPlugin)
   .dependsOn(mqtt, mqttStreaming)
+
+lazy val nats =
+  alpakkaProject("nats", "nats", Dependencies.Nats)
 
 lazy val orientdb = alpakkaProject("orientdb",
                                    "orientdb",

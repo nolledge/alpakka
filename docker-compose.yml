@@ -238,3 +238,9 @@ services:
       - ./ftp/src/test/resources/squid.conf:/etc/squid/squid.conf
     ports:
       - "3128:3128"
+  nats:
+    image: nats-streaming:0.8.0-beta
+    ports:
+      - 4222:4222
+      - 6222:6222
+      - 8222:8222

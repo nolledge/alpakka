@@ -48,6 +48,7 @@ The [Alpakka project](https://doc.akka.io/docs/alpakka/current/) is an open sour
 * [MongoDB](mongodb.md)
 * [MQTT](mqtt.md)
 * [MQTT Streaming](mqtt-streaming.md)
+* [NATS Streaming](nats.md)
 * [OrientDB](orientdb.md)
 * [Pulsar](external/pulsar.md)
 * [Server-sent Events (SSE)](sse.md)

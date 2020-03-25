@@ -339,6 +339,12 @@ object Dependencies {
       )
   )
 
+  val Nats =Seq(
+    libraryDependencies ++= Seq(
+      "io.nats" % "java-nats-streaming" % "2.2.3"
+    )
+  )
+
   val Mqtt = Seq(
     libraryDependencies ++= Seq(
         "org.eclipse.paho" % "org.eclipse.paho.client.mqttv3" % "1.2.0" // Eclipse Public License 1.0
